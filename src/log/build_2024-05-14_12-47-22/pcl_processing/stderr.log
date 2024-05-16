@@ -1,0 +1,5 @@
+[0m** WARNING ** io features related to pcap will be disabled[0m
+[31mCMake Error at CMakeLists.txt:14 (add_definition):
+  Unknown CMake command "add_definition".
+
+[0m

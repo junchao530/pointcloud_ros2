@@ -1,0 +1,81 @@
+[0.014s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.028s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.127s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.155s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.377s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.381s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.381s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[0.487s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.490s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.494s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.592s] -- Found Qhull version 8.0.2
+[0.696s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.795s] -- looking for PCL_COMMON
+[0.795s] -- looking for PCL_KDTREE
+[0.795s] -- looking for PCL_OCTREE
+[0.796s] -- looking for PCL_SEARCH
+[0.796s] -- looking for PCL_SAMPLE_CONSENSUS
+[0.796s] -- looking for PCL_FILTERS
+[0.797s] -- looking for PCL_2D
+[0.797s] -- looking for PCL_GEOMETRY
+[0.797s] -- looking for PCL_IO
+[0.797s] -- looking for PCL_FEATURES
+[0.797s] -- looking for PCL_ML
+[0.798s] -- looking for PCL_SEGMENTATION
+[0.798s] -- looking for PCL_VISUALIZATION
+[0.798s] -- looking for PCL_SURFACE
+[0.798s] -- looking for PCL_REGISTRATION
+[0.799s] -- looking for PCL_KEYPOINTS
+[0.799s] -- looking for PCL_TRACKING
+[0.799s] -- looking for PCL_RECOGNITION
+[0.799s] -- looking for PCL_STEREO
+[0.800s] -- looking for PCL_APPS
+[0.800s] -- looking for PCL_IN_HAND_SCANNER
+[0.801s] -- looking for PCL_MODELER
+[0.801s] -- looking for PCL_POINT_CLOUD_EDITOR
+[0.801s] -- looking for PCL_OUTOFCORE
+[0.801s] -- looking for PCL_PEOPLE
+[0.854s] -- Configuring done
+[0.879s] -- Generating done
+[0.880s] -- Build files have been written to: /home/jun/ros2_ws/build/pcl_processing
+[0.899s] [35m[1mConsolidate compiler generated dependencies of target plane_cloud[0m
+[0.900s] [35m[1mConsolidate compiler generated dependencies of target pcd_import[0m
+[0.904s] [ 16%] [32mBuilding CXX object CMakeFiles/circular_cloud.dir/src/2_circular_cloud.cpp.o[0m
+[0.913s] [ 50%] Built target plane_cloud
+[0.913s] [ 83%] Built target pcd_import
+[2.757s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/2_circular_cloud.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[2.757s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/2_circular_cloud.cpp:10:6:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_points[m[K’ was not declared in this scope
+[2.757s]    10 |      [01;31m[Knum_points[m[K = 50;
+[2.757s]       |      [01;31m[K^~~~~~~~~~[m[K
+[2.758s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/2_circular_cloud.cpp:17:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kradius[m[K’ was not declared in this scope; did you mean ‘[01m[Kpcl::fields::radius[m[K’?
+[2.758s]    17 |      point.x = [01;31m[Kradius[m[K * std::cos(angel);
+[2.758s]       |                [01;31m[K^~~~~~[m[K
+[2.758s]       |                [32m[Kpcl::fields::radius[m[K
+[2.759s] In file included from [01m[K/usr/include/boost/preprocessor/tuple/elem.hpp:23[m[K,
+[2.759s]                  from [01m[K/usr/include/boost/preprocessor/arithmetic/add.hpp:21[m[K,
+[2.759s]                  from [01m[K/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:66[m[K,
+[2.759s]                  from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:28[m[K,
+[2.759s]                  from [01m[K/usr/include/boost/mpl/not.hpp:20[m[K,
+[2.759s]                  from [01m[K/usr/include/boost/mpl/assert.hpp:17[m[K,
+[2.759s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:40[m[K,
+[2.759s]                  from [01m[K/usr/include/pcl-1.12/pcl/type_traits.h:40[m[K,
+[2.759s]                  from [01m[K/usr/include/pcl-1.12/pcl/memory.h:46[m[K,
+[2.759s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:42[m[K,
+[2.759s]                  from [01m[K/home/jun/ros2_ws/src/pcl_processing/src/2_circular_cloud.cpp:2[m[K:
+[2.759s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:2244:1:[m[K [01;36m[Knote: [m[K‘[01m[Kpcl::fields::radius[m[K’ declared here
+[2.759s]  2244 | [01;36m[KPOINT_CLOUD_REGISTER_POINT_STRUCT[m[K(pcl::PointSurfel,
+[2.759s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.761s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/2_circular_cloud.cpp:17:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kangel[m[K’ was not declared in this scope; did you mean ‘[01m[Kangle[m[K’?
+[2.761s]    17 |      point.x = radius * std::cos([01;31m[Kangel[m[K);
+[2.761s]       |                                  [01;31m[K^~~~~[m[K
+[2.761s]       |                                  [32m[Kangle[m[K
+[2.761s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/2_circular_cloud.cpp:15:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.761s]    15 |      double [01;35m[Kangle[m[K = i * angular_step_size;
+[2.761s]       |             [01;35m[K^~~~~[m[K
+[2.761s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/2_circular_cloud.cpp:9:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kraidus[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.761s]     9 |      double [01;35m[Kraidus[m[K = 3.0;
+[2.761s]       |             [01;35m[K^~~~~~[m[K
+[2.971s] gmake[2]: *** [CMakeFiles/circular_cloud.dir/build.make:76: CMakeFiles/circular_cloud.dir/src/2_circular_cloud.cpp.o] Error 1
+[2.971s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/circular_cloud.dir/all] Error 2
+[2.971s] gmake: *** [Makefile:146: all] Error 2
+[2.974s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8

@@ -1,0 +1,83 @@
+-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0m** WARNING ** io features related to pcap will be disabled[0m
+-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+-- Found Qhull version 8.0.2
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- looking for PCL_COMMON
+-- looking for PCL_KDTREE
+-- looking for PCL_OCTREE
+-- looking for PCL_SEARCH
+-- looking for PCL_SAMPLE_CONSENSUS
+-- looking for PCL_FILTERS
+-- looking for PCL_2D
+-- looking for PCL_GEOMETRY
+-- looking for PCL_IO
+-- looking for PCL_FEATURES
+-- looking for PCL_ML
+-- looking for PCL_SEGMENTATION
+-- looking for PCL_VISUALIZATION
+-- looking for PCL_SURFACE
+-- looking for PCL_REGISTRATION
+-- looking for PCL_KEYPOINTS
+-- looking for PCL_TRACKING
+-- looking for PCL_RECOGNITION
+-- looking for PCL_STEREO
+-- looking for PCL_APPS
+-- looking for PCL_IN_HAND_SCANNER
+-- looking for PCL_MODELER
+-- looking for PCL_POINT_CLOUD_EDITOR
+-- looking for PCL_OUTOFCORE
+-- looking for PCL_PEOPLE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jun/ros2_ws/build/pcl_processing
+[35m[1mConsolidate compiler generated dependencies of target pcd_import[0m
+[ 25%] Built target pcd_import
+[ 37%] [32mBuilding CXX object CMakeFiles/pcl_filter.dir/src/3_filtering.cpp.o[0m
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:7:1:[m[K [01;31m[Kerror: [m[K‘[01m[Ktype[m[K’ does not name a type; did you mean ‘[01m[Ktypeof[m[K’?
+    7 | [01;31m[Ktype[m[K def pcl::PointXYZRGB PoinT;
+      | [01;31m[K^~~~[m[K
+      | [32m[Ktypeof[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:10:21:[m[K [01;31m[Kerror: [m[K‘[01m[KPoinT[m[K’ was not declared in this scope
+   10 |     pcl::PointCloud<[01;31m[KPoinT[m[K>::Ptr cloud(new pcl::PointCloud<PoinT>);
+      |                     [01;31m[K^~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:10:26:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   10 |     pcl::PointCloud<PoinT[01;31m[K>[m[K::Ptr cloud(new pcl::PointCloud<PoinT>);
+      |                          [01;31m[K^[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:10:33:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kcloud[m[K’
+   10 |     pcl::PointCloud<PoinT>::Ptr [01;31m[Kcloud[m[K(new pcl::PointCloud<PoinT>);
+      |                                 [01;31m[K^~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:11:33:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kvoxel_cloud[m[K’
+   11 |     pcl::PointCloud<PoinT>::Ptr [01;31m[Kvoxel_cloud[m[K(new pcl::PointCloud<PoinT>);
+      |                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:19:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcloud[m[K’ was not declared in this scope
+   19 |     cloud_reader.read(path + cloud_name, *[01;31m[Kcloud[m[K);
+      |                                           [01;31m[K^~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:21:20:[m[K [01;31m[Kerror: [m[K‘[01m[KPointT[m[K’ was not declared in this scope
+   21 |     pcl::VoxelGrid<[01;31m[KPointT[m[K> voxel_filter;
+      |                    [01;31m[K^~~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:21:26:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   21 |     pcl::VoxelGrid<PointT[01;31m[K>[m[K voxel_filter;
+      |                          [01;31m[K^[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:22:18:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetInputCloud[m[K’ in ‘[01m[Kvoxel_filter[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   22 |     voxel_filter.[01;31m[KsetInputCloud[m[K(cloud);
+      |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:23:18:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetLeafSize[m[K’ in ‘[01m[Kvoxel_filter[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   23 |     voxel_filter.[01;31m[KsetLeafSize[m[K(0.05, 0.05, 0.05);
+      |                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:24:18:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfilter[m[K’ in ‘[01m[Kvoxel_filter[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   24 |     voxel_filter.[01;31m[Kfilter[m[K(*voxel_cloud);
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:24:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoxel_cloud[m[K’ was not declared in this scope
+   24 |     voxel_filter.filter(*[01;31m[Kvoxel_cloud[m[K);
+      |                          [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_filter.dir/build.make:76: CMakeFiles/pcl_filter.dir/src/3_filtering.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/pcl_filter.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

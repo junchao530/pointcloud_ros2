@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target pcd_import[0m
+[ 50%] [32m[1mLinking CXX executable pcd_import[0m
+/usr/bin/ld: CMakeFiles/pcd_import.dir/src/0_table_scene.cpp.o: warning: relocation against `_ZTVN3pcl9PCDReaderE' in read-only section `.text._ZN3pcl9PCDReaderD2Ev[_ZN3pcl9PCDReaderD5Ev]'
+/usr/bin/ld: CMakeFiles/pcd_import.dir/src/0_table_scene.cpp.o: in function `main':
+0_table_scene.cpp:(.text+0xb6): undefined reference to `pcl::PCDReader::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, pcl::PCLPointCloud2&, int)'
+/usr/bin/ld: 0_table_scene.cpp:(.text+0xd9): undefined reference to `pcl::console::print(pcl::console::VERBOSITY_LEVEL, char const*, ...)'
+/usr/bin/ld: CMakeFiles/pcd_import.dir/src/0_table_scene.cpp.o: in function `pcl::PCDReader::PCDReader()':
+0_table_scene.cpp:(.text._ZN3pcl9PCDReaderC2Ev[_ZN3pcl9PCDReaderC5Ev]+0x1f): undefined reference to `vtable for pcl::PCDReader'
+/usr/bin/ld: CMakeFiles/pcd_import.dir/src/0_table_scene.cpp.o: in function `pcl::PCDReader::~PCDReader()':
+0_table_scene.cpp:(.text._ZN3pcl9PCDReaderD2Ev[_ZN3pcl9PCDReaderD5Ev]+0x13): undefined reference to `vtable for pcl::PCDReader'
+/usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/pcd_import.dir/build.make:97: pcd_import] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcd_import.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

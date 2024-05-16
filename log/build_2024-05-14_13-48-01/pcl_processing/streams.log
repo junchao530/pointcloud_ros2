@@ -1,0 +1,64 @@
+[0.007s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.025s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.116s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.148s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.364s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.367s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.367s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[0.470s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.475s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.478s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.577s] -- Found Qhull version 8.0.2
+[0.680s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.778s] -- looking for PCL_COMMON
+[0.778s] -- looking for PCL_KDTREE
+[0.778s] -- looking for PCL_OCTREE
+[0.778s] -- looking for PCL_SEARCH
+[0.778s] -- looking for PCL_SAMPLE_CONSENSUS
+[0.778s] -- looking for PCL_FILTERS
+[0.779s] -- looking for PCL_2D
+[0.779s] -- looking for PCL_GEOMETRY
+[0.779s] -- looking for PCL_IO
+[0.779s] -- looking for PCL_FEATURES
+[0.780s] -- looking for PCL_ML
+[0.780s] -- looking for PCL_SEGMENTATION
+[0.780s] -- looking for PCL_VISUALIZATION
+[0.780s] -- looking for PCL_SURFACE
+[0.781s] -- looking for PCL_REGISTRATION
+[0.781s] -- looking for PCL_KEYPOINTS
+[0.781s] -- looking for PCL_TRACKING
+[0.782s] -- looking for PCL_RECOGNITION
+[0.782s] -- looking for PCL_STEREO
+[0.782s] -- looking for PCL_APPS
+[0.783s] -- looking for PCL_IN_HAND_SCANNER
+[0.783s] -- looking for PCL_MODELER
+[0.783s] -- looking for PCL_POINT_CLOUD_EDITOR
+[0.783s] -- looking for PCL_OUTOFCORE
+[0.784s] -- looking for PCL_PEOPLE
+[0.838s] -- Configuring done
+[0.857s] -- Generating done
+[0.858s] -- Build files have been written to: /home/jun/ros2_ws/build/pcl_processing
+[0.879s] [35m[1mConsolidate compiler generated dependencies of target pcd_import[0m
+[0.892s] [ 50%] [32mBuilding CXX object CMakeFiles/pcd_import.dir/src/0_table_scene.cpp.o[0m
+[3.177s] [100%] [32m[1mLinking CXX executable pcd_import[0m
+[3.472s] [100%] Built target pcd_import
+[3.479s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[3.499s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/pcl_processing
+[3.504s] -- Install configuration: ""
+[3.504s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/pcd_import
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/package_run_dependencies/pcl_processing
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/parent_prefix_path/pcl_processing
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.sh
+[3.505s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.dsv
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/path.sh
+[3.505s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/path.dsv
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.bash
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.sh
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.zsh
+[3.505s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.dsv
+[3.505s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/package.dsv
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/packages/pcl_processing
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/cmake/pcl_processingConfig.cmake
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/cmake/pcl_processingConfig-version.cmake
+[3.505s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/package.xml
+[3.506s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/pcl_processing

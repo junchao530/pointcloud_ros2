@@ -1,0 +1,743 @@
+[0.017s] Invoking command in '/home/jun/ros2_ws/build/ros2_kitti_publishers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/ros2_kitti_publishers -- -j8 -l8
+[0.070s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.306s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.355s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.360s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.371s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.396s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.419s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.502s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.505s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.716s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.894s] -- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)
+[1.005s] -- Found rclcpp_lifecycle: 16.0.8 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.049s] -- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+[1.069s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.114s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.213s] -- Found shape_msgs: 4.2.3 (/opt/ros/humble/share/shape_msgs/cmake)
+[1.275s] -- Found tf2: 0.25.6 (/opt/ros/humble/share/tf2/cmake)
+[1.283s] -- Found tf2_geometry_msgs: 0.25.6 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.290s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.291s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.567s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.708s] -- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)
+[1.848s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system 
+[1.860s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.870s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+[1.871s] -- looking for PCL_COMMON
+[2.086s] -- Configuring done
+[2.147s] -- Generating done
+[2.150s] -- Build files have been written to: /home/jun/ros2_ws/build/ros2_kitti_publishers
+[2.177s] [35m[1mConsolidate compiler generated dependencies of target ros2_kitti_publishers[0m
+[2.203s] [ 25%] [32mBuilding CXX object CMakeFiles/ros2_kitti_publishers.dir/src/node/kitti_publishers_node.cpp.o[0m
+[7.099s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.099s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.099s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.099s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.099s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.099s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.099s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.099s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.099s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.100s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.100s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.100s]   241 |     struct [01;35m[K{[m[K \
+[7.100s]       |            [01;35m[K^[m[K
+[7.100s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.100s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.100s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.100s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:337:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.100s]   337 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.100s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.233s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:289:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.233s]   289 |       [01;35m[K{[m[K \
+[7.233s]       |       [01;35m[K^[m[K
+[7.233s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:313:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_RGB[m[K’
+[7.233s]   313 |   [01;36m[KPCL_ADD_UNION_RGB[m[K \
+[7.233s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.233s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:368:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_RGB[m[K’
+[7.233s]   368 |     [01;36m[KPCL_ADD_RGB[m[K;
+[7.233s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[7.321s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.321s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.322s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.322s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.322s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.322s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.322s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.322s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.322s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.322s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.322s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:318:5:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.322s]   318 |     [01;35m[K{[m[K \
+[7.322s]       |     [01;35m[K^[m[K
+[7.322s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:411:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_INTENSITY[m[K’
+[7.322s]   411 |     [01;36m[KPCL_ADD_INTENSITY[m[K;
+[7.322s]       |     [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.322s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:411:22:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.322s]   411 |     PCL_ADD_INTENSITY[01;35m[K;[m[K
+[7.322s]       |                      [01;35m[K^[m[K
+[7.323s]       |                      [31m[K-[m[K
+[7.323s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:324:5:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.323s]   324 |     [01;35m[K{[m[K \
+[7.323s]       |     [01;35m[K^[m[K
+[7.323s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:437:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_INTENSITY_8U[m[K’
+[7.323s]   437 |     [01;36m[KPCL_ADD_INTENSITY_8U[m[K;
+[7.323s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[7.323s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:437:25:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.323s]   437 |     PCL_ADD_INTENSITY_8U[01;35m[K;[m[K
+[7.323s]       |                         [01;35m[K^[m[K
+[7.323s]       |                         [31m[K-[m[K
+[7.323s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:330:5:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.323s]   330 |     [01;35m[K{[m[K \
+[7.324s]       |     [01;35m[K^[m[K
+[7.324s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:469:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_INTENSITY_32U[m[K’
+[7.324s]   469 |     [01;36m[KPCL_ADD_INTENSITY_32U[m[K;
+[7.324s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.324s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:469:26:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.324s]   469 |     PCL_ADD_INTENSITY_32U[01;35m[K;[m[K
+[7.324s]       |                          [01;35m[K^[m[K
+[7.324s]       |                          [31m[K-[m[K
+[7.324s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.324s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.324s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.324s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.324s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.324s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.324s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.324s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.324s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.325s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.325s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.325s]   241 |     struct [01;35m[K{[m[K \
+[7.325s]       |            [01;35m[K^[m[K
+[7.325s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.325s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.325s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.325s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:497:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.325s]   497 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.325s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.325s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.325s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.325s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.325s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.325s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.325s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.325s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.325s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.326s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.326s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.326s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:501:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.326s]   501 |       [01;35m[K{[m[K
+[7.326s]       |       [01;35m[K^[m[K
+[7.326s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.326s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.326s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.326s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.326s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.326s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.326s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.326s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.326s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.326s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.326s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.326s]   241 |     struct [01;35m[K{[m[K \
+[7.327s]       |            [01;35m[K^[m[K
+[7.327s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.327s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.327s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.327s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:533:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.327s]   533 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.327s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.327s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.327s]   241 |     struct [01;35m[K{[m[K \
+[7.327s]       |            [01;35m[K^[m[K
+[7.327s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.327s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.327s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.327s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:573:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.327s]   573 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.327s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.328s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:289:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.328s]   289 |       [01;35m[K{[m[K \
+[7.328s]       |       [01;35m[K^[m[K
+[7.328s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:313:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_RGB[m[K’
+[7.328s]   313 |   [01;36m[KPCL_ADD_UNION_RGB[m[K \
+[7.328s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.328s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:574:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_RGB[m[K’
+[7.328s]   574 |     [01;36m[KPCL_ADD_RGB[m[K;
+[7.328s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[7.328s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.328s]   241 |     struct [01;35m[K{[m[K \
+[7.328s]       |            [01;35m[K^[m[K
+[7.328s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.328s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.328s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.328s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:629:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.329s]   629 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.329s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.329s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:289:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.329s]   289 |       [01;35m[K{[m[K \
+[7.329s]       |       [01;35m[K^[m[K
+[7.329s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:313:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_RGB[m[K’
+[7.329s]   313 |   [01;36m[KPCL_ADD_UNION_RGB[m[K \
+[7.329s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.329s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:630:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_RGB[m[K’
+[7.329s]   630 |     [01;36m[KPCL_ADD_RGB[m[K;
+[7.329s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[7.329s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.329s]   241 |     struct [01;35m[K{[m[K \
+[7.329s]       |            [01;35m[K^[m[K
+[7.329s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.329s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.329s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.329s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:636:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.329s]   636 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.330s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.330s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:289:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.330s]   289 |       [01;35m[K{[m[K \
+[7.330s]       |       [01;35m[K^[m[K
+[7.330s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:313:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_RGB[m[K’
+[7.330s]   313 |   [01;36m[KPCL_ADD_UNION_RGB[m[K \
+[7.330s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.330s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:637:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_RGB[m[K’
+[7.330s]   637 |     [01;36m[KPCL_ADD_RGB[m[K;
+[7.330s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[7.330s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.330s]   241 |     struct [01;35m[K{[m[K \
+[7.330s]       |            [01;35m[K^[m[K
+[7.330s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.330s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.331s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.331s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:741:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.331s]   741 |     [01;36m[KPCL_ADD_POINT4D[m[K; // this adds the members x,y,z
+[7.331s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.331s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.331s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.331s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.331s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.331s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.331s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.331s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.331s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.332s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.332s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.332s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:745:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.332s]   745 |       [01;35m[K{[m[K
+[7.332s]       |       [01;35m[K^[m[K
+[7.332s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.332s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.332s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.332s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.332s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.332s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.332s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.332s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.332s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.332s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.332s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.332s]   241 |     struct [01;35m[K{[m[K \
+[7.332s]       |            [01;35m[K^[m[K
+[7.332s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.332s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.333s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.333s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:782:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.333s]   782 |     [01;36m[KPCL_ADD_POINT4D[m[K;    // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.333s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.333s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.333s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.333s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.333s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.333s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.333s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.333s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.333s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.333s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.333s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.333s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:786:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.334s]   786 |       [01;35m[K{[m[K
+[7.334s]       |       [01;35m[K^[m[K
+[7.334s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.334s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.334s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.334s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.334s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.334s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.334s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.334s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.334s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.334s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.334s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.334s]   241 |     struct [01;35m[K{[m[K \
+[7.334s]       |            [01;35m[K^[m[K
+[7.335s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.335s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.335s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.335s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:867:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.335s]   867 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.335s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.335s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.335s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.335s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.335s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.335s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.335s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.335s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.335s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.335s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.336s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.336s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:871:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.336s]   871 |       [01;35m[K{[m[K
+[7.336s]       |       [01;35m[K^[m[K
+[7.336s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.336s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.336s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.336s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.336s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.336s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.336s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.336s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.336s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.336s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.336s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:266:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.336s]   266 |     struct [01;35m[K{[m[K \
+[7.336s]       |            [01;35m[K^[m[K
+[7.337s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:280:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_NORMAL4D[m[K’
+[7.337s]   280 |   [01;36m[KPCL_ADD_UNION_NORMAL4D[m[K \
+[7.337s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.337s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:883:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_NORMAL4D[m[K’
+[7.337s]   883 |     [01;36m[KPCL_ADD_NORMAL4D[m[K; // This adds the member normal[3] which can also be accessed using the point (which is float[4])
+[7.337s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[7.337s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.337s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.337s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.337s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.337s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.337s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.337s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.337s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.338s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.338s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.338s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:887:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.338s]   887 |       [01;35m[K{[m[K
+[7.338s]       |       [01;35m[K^[m[K
+[7.338s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.338s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.338s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.338s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.338s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.338s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.338s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.338s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.338s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.338s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.338s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:266:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.338s]   266 |     struct [01;35m[K{[m[K \
+[7.338s]       |            [01;35m[K^[m[K
+[7.338s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:280:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_NORMAL4D[m[K’
+[7.338s]   280 |   [01;36m[KPCL_ADD_UNION_NORMAL4D[m[K \
+[7.339s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.339s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:924:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_NORMAL4D[m[K’
+[7.339s]   924 |     [01;36m[KPCL_ADD_NORMAL4D[m[K;
+[7.339s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[7.339s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.339s]   241 |     struct [01;35m[K{[m[K \
+[7.339s]       |            [01;35m[K^[m[K
+[7.339s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.339s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.339s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.339s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:955:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.339s]   955 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.339s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.339s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:266:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.339s]   266 |     struct [01;35m[K{[m[K \
+[7.340s]       |            [01;35m[K^[m[K
+[7.340s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:280:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_NORMAL4D[m[K’
+[7.340s]   280 |   [01;36m[KPCL_ADD_UNION_NORMAL4D[m[K \
+[7.340s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.340s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:956:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_NORMAL4D[m[K’
+[7.340s]   956 |     [01;36m[KPCL_ADD_NORMAL4D[m[K; // This adds the member normal[3] which can also be accessed using the point (which is float[4])
+[7.340s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[7.340s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.340s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.340s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.340s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.340s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.340s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.341s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.341s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.341s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.341s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.341s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:960:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.341s]   960 |       [01;35m[K{[m[K
+[7.341s]       |       [01;35m[K^[m[K
+[7.341s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.341s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.341s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.341s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.341s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.341s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.341s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.341s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.342s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.342s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.342s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.342s]   241 |     struct [01;35m[K{[m[K \
+[7.342s]       |            [01;35m[K^[m[K
+[7.342s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.342s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.342s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.342s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1001:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.342s]  1001 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.342s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.342s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:266:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.342s]   266 |     struct [01;35m[K{[m[K \
+[7.342s]       |            [01;35m[K^[m[K
+[7.342s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:280:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_NORMAL4D[m[K’
+[7.342s]   280 |   [01;36m[KPCL_ADD_UNION_NORMAL4D[m[K \
+[7.342s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.343s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1002:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_NORMAL4D[m[K’
+[7.343s]  1002 |     [01;36m[KPCL_ADD_NORMAL4D[m[K; // This adds the member normal[3] which can also be accessed using the point (which is float[4])
+[7.343s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[7.343s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:289:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.343s]   289 |       [01;35m[K{[m[K \
+[7.343s]       |       [01;35m[K^[m[K
+[7.343s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1007:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_RGB[m[K’
+[7.343s]  1007 |         [01;36m[KPCL_ADD_UNION_RGB[m[K;
+[7.343s]       |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.343s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.343s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.343s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.343s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.344s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.344s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.344s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.344s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.344s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.344s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.344s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1007:26:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.344s]  1007 |         PCL_ADD_UNION_RGB[01;35m[K;[m[K
+[7.344s]       |                          [01;35m[K^[m[K
+[7.344s]       |                          [31m[K-[m[K
+[7.344s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1006:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.344s]  1006 |       [01;35m[K{[m[K
+[7.344s]       |       [01;35m[K^[m[K
+[7.344s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.344s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.344s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.345s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.345s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.345s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.345s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.345s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.345s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.345s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.345s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.345s]   241 |     struct [01;35m[K{[m[K \
+[7.345s]       |            [01;35m[K^[m[K
+[7.345s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.345s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.345s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.345s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1085:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.345s]  1085 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.345s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.345s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:266:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.346s]   266 |     struct [01;35m[K{[m[K \
+[7.346s]       |            [01;35m[K^[m[K
+[7.346s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:280:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_NORMAL4D[m[K’
+[7.346s]   280 |   [01;36m[KPCL_ADD_UNION_NORMAL4D[m[K \
+[7.346s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.346s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1086:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_NORMAL4D[m[K’
+[7.346s]  1086 |     [01;36m[KPCL_ADD_NORMAL4D[m[K; // This adds the member normal[3] which can also be accessed using the point (which is float[4])
+[7.346s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[7.346s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.346s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.346s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.346s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.346s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.346s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.346s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.346s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.346s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.346s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.346s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1090:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.347s]  1090 |       [01;35m[K{[m[K
+[7.347s]       |       [01;35m[K^[m[K
+[7.347s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.347s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.347s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.347s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.347s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.347s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.347s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.347s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.347s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.347s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.347s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.347s]   241 |     struct [01;35m[K{[m[K \
+[7.347s]       |            [01;35m[K^[m[K
+[7.348s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.348s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.348s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.348s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1135:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.348s]  1135 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.348s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.348s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:266:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.348s]   266 |     struct [01;35m[K{[m[K \
+[7.348s]       |            [01;35m[K^[m[K
+[7.348s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:280:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_NORMAL4D[m[K’
+[7.348s]   280 |   [01;36m[KPCL_ADD_UNION_NORMAL4D[m[K \
+[7.348s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.348s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1136:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_NORMAL4D[m[K’
+[7.348s]  1136 |     [01;36m[KPCL_ADD_NORMAL4D[m[K; // This adds the member normal[3] which can also be accessed using the point (which is float[4])
+[7.348s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[7.348s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.349s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.349s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.349s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.349s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.349s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.349s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.349s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.349s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.349s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.349s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1140:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.349s]  1140 |       [01;35m[K{[m[K
+[7.349s]       |       [01;35m[K^[m[K
+[7.350s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.350s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.350s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.350s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.350s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.350s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.350s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.350s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.350s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.350s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.350s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.351s]   241 |     struct [01;35m[K{[m[K \
+[7.351s]       |            [01;35m[K^[m[K
+[7.351s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.351s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.351s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.351s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1187:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.351s]  1187 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.351s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.351s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.351s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.352s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.352s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.352s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.352s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.352s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.352s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.352s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.352s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.352s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1191:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.352s]  1191 |       [01;35m[K{[m[K
+[7.352s]       |       [01;35m[K^[m[K
+[7.352s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.353s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.353s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.353s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.353s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.353s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.353s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.353s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.353s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.353s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.353s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.353s]   241 |     struct [01;35m[K{[m[K \
+[7.353s]       |            [01;35m[K^[m[K
+[7.353s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.354s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.354s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.354s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1226:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.354s]  1226 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.354s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.354s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.354s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.354s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.354s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.354s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.354s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.354s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.355s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.355s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.355s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.355s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1230:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.355s]  1230 |       [01;35m[K{[m[K
+[7.355s]       |       [01;35m[K^[m[K
+[7.355s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1326:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.355s]  1326 |       [01;35m[K{[m[K
+[7.355s]       |       [01;35m[K^[m[K
+[7.355s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1519:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.355s]  1519 |       [01;35m[K{[m[K
+[7.355s]       |       [01;35m[K^[m[K
+[7.395s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1738:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.396s]  1738 |       [01;35m[K{[m[K
+[7.396s]       |       [01;35m[K^[m[K
+[7.396s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.396s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.396s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.396s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.396s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.396s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.396s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.396s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.396s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.397s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.397s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.397s]   241 |     struct [01;35m[K{[m[K \
+[7.397s]       |            [01;35m[K^[m[K
+[7.397s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.397s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.397s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.397s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1765:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.397s]  1765 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.397s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.398s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.398s]   241 |     struct [01;35m[K{[m[K \
+[7.398s]       |            [01;35m[K^[m[K
+[7.398s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.398s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.399s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.399s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1818:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.399s]  1818 |     [01;36m[KPCL_ADD_POINT4D[m[K; // This adds the members x,y,z which can also be accessed using the point (which is float[4])
+[7.399s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[7.399s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:266:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.399s]   266 |     struct [01;35m[K{[m[K \
+[7.399s]       |            [01;35m[K^[m[K
+[7.400s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:280:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_NORMAL4D[m[K’
+[7.400s]   280 |   [01;36m[KPCL_ADD_UNION_NORMAL4D[m[K \
+[7.400s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.400s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1819:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_NORMAL4D[m[K’
+[7.400s]  1819 |     [01;36m[KPCL_ADD_NORMAL4D[m[K; // This adds the member normal[3] which can also be accessed using the point (which is float[4])
+[7.400s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[7.400s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:289:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.400s]   289 |       [01;35m[K{[m[K \
+[7.400s]       |       [01;35m[K^[m[K
+[7.401s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1824:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_RGB[m[K’
+[7.401s]  1824 |         [01;36m[KPCL_ADD_UNION_RGB[m[K;
+[7.401s]       |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[7.401s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.401s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.401s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.401s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.401s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.402s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.402s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.402s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.402s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.402s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.402s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1824:26:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.402s]  1824 |         PCL_ADD_UNION_RGB[01;35m[K;[m[K
+[7.402s]       |                          [01;35m[K^[m[K
+[7.402s]       |                          [31m[K-[m[K
+[7.402s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1823:7:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.403s]  1823 |       [01;35m[K{[m[K
+[7.403s]       |       [01;35m[K^[m[K
+[7.403s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_types.h:354[m[K,
+[7.403s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/copy_point.hpp:40[m[K,
+[7.403s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/copy_point.h:58[m[K,
+[7.403s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/impl/io.hpp:45[m[K,
+[7.403s]                  from [01m[K/usr/include/pcl-1.12/pcl/common/io.h:538[m[K,
+[7.403s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/impl/pcd_io.hpp:48[m[K,
+[7.403s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:789[m[K,
+[7.404s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions.h:72[m[K,
+[7.404s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:26[m[K,
+[7.404s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[7.404s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:241:12:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.404s]   241 |     struct [01;35m[K{[m[K \
+[7.404s]       |            [01;35m[K^[m[K
+[7.404s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:259:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_UNION_POINT4D[m[K’
+[7.404s]   259 |   [01;36m[KPCL_ADD_UNION_POINT4D[m[K \
+[7.404s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[7.404s] [01m[K/usr/include/pcl-1.12/pcl/impl/point_types.hpp:1867:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPCL_ADD_POINT4D[m[K’
+[7.405s]  1867 |     [01;36m[KPCL_ADD_POINT4D[m[K;
+[7.405s]       |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[8.590s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[8.590s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[8.590s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.590s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.590s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.591s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.591s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.591s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.591s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.591s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.591s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.591s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:19[m[K,
+[8.591s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[8.591s] [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:[m[K In member function ‘[01m[Kvoid KittiPublishersNode::on_timer_callback()[m[K’:
+[8.591s] [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:60:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kstd::vector<std::__cxx11::basic_string<char> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[8.591s]    60 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"OxTs size: '%i'"[m[K, [32m[Koxts_parsed_array.size()[m[K);
+[8.592s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[8.592s]       |                                                                              [32m[K|[m[K
+[8.592s]       |                                                                              [32m[Kstd::vector<std::__cxx11::basic_string<char> >::size_type {aka long unsigned int}[m[K
+[8.592s] [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:60:51:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[8.592s]    60 |     RCLCPP_INFO(this->get_logger(), "OxTs size: '[01;36m[K%i[m[K'", oxts_parsed_array.size());
+[8.592s]       |                                                  [01;36m[K~^[m[K
+[8.592s]       |                                                   [01;36m[K|[m[K
+[8.592s]       |                                                   [01;36m[Kint[m[K
+[8.592s]       |                                                  [32m[K%li[m[K
+[8.619s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[8.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[8.620s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/include/ros2_kitti_publishers/kitti_publishers_node.hpp:19[m[K,
+[8.620s]                  from [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:3[m[K:
+[8.621s] [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:[m[K In member function ‘[01m[Kstd::string KittiPublishersNode::get_path(KittiPublishersNode::PublisherType)[m[K’:
+[8.621s] [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:120:35:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[KKittiPublishersNode::PublisherType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[8.621s]   120 |   RCLCPP_INFO(this->get_logger(), [01;35m[K"get_path: '%i'"[m[K, [32m[Kpublisher_type[m[K);
+[8.621s]       |                                   [01;35m[K^~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~[m[K
+[8.621s]       |                                                     [32m[K|[m[K
+[8.621s]       |                                                     [32m[KKittiPublishersNode::PublisherType[m[K
+[8.621s] [01m[K/home/jun/ros2_ws/src/ros2_kitti_publishers/src/node/kitti_publishers_node.cpp:120:48:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[8.621s]   120 |   RCLCPP_INFO(this->get_logger(), "get_path: '[01;36m[K%i[m[K'", publisher_type);
+[8.621s]       |                                               [01;36m[K~^[m[K
+[8.621s]       |                                                [01;36m[K|[m[K
+[8.621s]       |                                                [01;36m[Kint[m[K
+[13.889s] [ 50%] [32m[1mLinking CXX shared library libros2_kitti_publishers.so[0m
+[14.413s] [ 50%] Built target ros2_kitti_publishers
+[14.424s] [35m[1mConsolidate compiler generated dependencies of target kitti_publishers[0m
+[14.452s] [ 75%] [32mBuilding CXX object CMakeFiles/kitti_publishers.dir/src/kitti_publishers_main.cpp.o[0m
+[21.706s] [100%] [32m[1mLinking CXX executable kitti_publishers[0m
+[22.283s] [100%] Built target kitti_publishers
+[22.293s] Invoked command in '/home/jun/ros2_ws/build/ros2_kitti_publishers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/ros2_kitti_publishers -- -j8 -l8
+[22.325s] Invoking command in '/home/jun/ros2_ws/build/ros2_kitti_publishers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/ros2_kitti_publishers
+[22.331s] -- Install configuration: ""
+[22.331s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/include/
+[22.331s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/include//ros2_kitti_publishers
+[22.331s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/include//ros2_kitti_publishers/visibility.h
+[22.332s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/include//ros2_kitti_publishers/WGS84toCartesian.hpp
+[22.332s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/include//ros2_kitti_publishers/kitti_publishers_node.hpp
+[22.332s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/launch
+[22.332s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/launch/README.md
+[22.332s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/lib/libros2_kitti_publishers.so
+[22.337s] -- Set runtime path of "/home/jun/ros2_ws/install/ros2_kitti_publishers/lib/libros2_kitti_publishers.so" to ""
+[22.338s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/lib/ros2_kitti_publishers/kitti_publishers
+[22.338s] -- Set runtime path of "/home/jun/ros2_ws/install/ros2_kitti_publishers/lib/ros2_kitti_publishers/kitti_publishers" to ""
+[22.338s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ament_index/resource_index/package_run_dependencies/ros2_kitti_publishers
+[22.338s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ament_index/resource_index/parent_prefix_path/ros2_kitti_publishers
+[22.338s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/environment/ament_prefix_path.sh
+[22.339s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/environment/ament_prefix_path.dsv
+[22.339s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/environment/path.sh
+[22.339s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/environment/path.dsv
+[22.339s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/local_setup.bash
+[22.339s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/local_setup.sh
+[22.339s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/local_setup.zsh
+[22.339s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/local_setup.dsv
+[22.340s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/package.dsv
+[22.340s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ament_index/resource_index/packages/ros2_kitti_publishers
+[22.340s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/cmake/ros2_kitti_publishersConfig.cmake
+[22.340s] -- Up-to-date: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/cmake/ros2_kitti_publishersConfig-version.cmake
+[22.340s] -- Installing: /home/jun/ros2_ws/install/ros2_kitti_publishers/share/ros2_kitti_publishers/package.xml
+[22.342s] Invoked command in '/home/jun/ros2_ws/build/ros2_kitti_publishers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/ros2_kitti_publishers

@@ -1,0 +1,61 @@
+[0.012s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.026s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.120s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.155s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.376s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.380s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.380s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[0.485s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.489s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.493s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.590s] -- Found Qhull version 8.0.2
+[0.693s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.790s] -- looking for PCL_COMMON
+[0.790s] -- looking for PCL_KDTREE
+[0.790s] -- looking for PCL_OCTREE
+[0.790s] -- looking for PCL_SEARCH
+[0.791s] -- looking for PCL_SAMPLE_CONSENSUS
+[0.791s] -- looking for PCL_FILTERS
+[0.791s] -- looking for PCL_2D
+[0.791s] -- looking for PCL_GEOMETRY
+[0.792s] -- looking for PCL_IO
+[0.792s] -- looking for PCL_FEATURES
+[0.792s] -- looking for PCL_ML
+[0.792s] -- looking for PCL_SEGMENTATION
+[0.793s] -- looking for PCL_VISUALIZATION
+[0.793s] -- looking for PCL_SURFACE
+[0.793s] -- looking for PCL_REGISTRATION
+[0.794s] -- looking for PCL_KEYPOINTS
+[0.794s] -- looking for PCL_TRACKING
+[0.794s] -- looking for PCL_RECOGNITION
+[0.794s] -- looking for PCL_STEREO
+[0.795s] -- looking for PCL_APPS
+[0.795s] -- looking for PCL_IN_HAND_SCANNER
+[0.795s] -- looking for PCL_MODELER
+[0.795s] -- looking for PCL_POINT_CLOUD_EDITOR
+[0.796s] -- looking for PCL_OUTOFCORE
+[0.796s] -- looking for PCL_PEOPLE
+[0.848s] -- Configuring done
+[0.866s] -- Generating done
+[0.868s] -- Build files have been written to: /home/jun/ros2_ws/build/pcl_processing
+[0.887s] [35m[1mConsolidate compiler generated dependencies of target pcd_import[0m
+[0.892s] [ 25%] [32mBuilding CXX object CMakeFiles/plane_cloud.dir/src/1_planner_cloud.cpp.o[0m
+[0.900s] [ 75%] Built target pcd_import
+[2.717s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/1_planner_cloud.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[2.717s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/1_planner_cloud.cpp:8:11:[m[K [01;31m[Kerror: [m[K‘[01m[KPCLPointCloud[m[K’ is not a member of ‘[01m[Kpcl[m[K’; did you mean ‘[01m[KPCLPointCloud2[m[K’?
+[2.717s]     8 |      pcl::[01;31m[KPCLPointCloud[m[K<pcl::PointXYZ> cloud;
+[2.717s]       |           [01;31m[K^~~~~~~~~~~~~[m[K
+[2.717s]       |           [32m[KPCLPointCloud2[m[K
+[2.717s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/1_planner_cloud.cpp:8:38:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[2.717s]     8 |      pcl::PCLPointCloud<pcl::PointXYZ[01;31m[K>[m[K cloud;
+[2.718s]       |                                      [01;31m[K^[m[K
+[2.721s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/1_planner_cloud.cpp:8:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kcloud[m[K’ was not declared in this scope
+[2.721s]     8 |      pcl::PCLPointCloud<pcl::PointXYZ> [01;31m[Kcloud[m[K;
+[2.721s]       |                                        [01;31m[K^~~~~[m[K
+[2.723s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/1_planner_cloud.cpp:12:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath[m[K’ was not declared in this scope
+[2.723s]    12 |      pcl::io::savePCDFileASCII([01;31m[Kpath[m[K, cloud);
+[2.723s]       |                                [01;31m[K^~~~[m[K
+[2.887s] gmake[2]: *** [CMakeFiles/plane_cloud.dir/build.make:76: CMakeFiles/plane_cloud.dir/src/1_planner_cloud.cpp.o] Error 1
+[2.887s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/plane_cloud.dir/all] Error 2
+[2.887s] gmake: *** [Makefile:146: all] Error 2
+[2.889s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8

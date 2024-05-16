@@ -1,0 +1,4 @@
+[0.015s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.058s] [ 66%] Built target plane_cloud
+[0.058s] [ 66%] Built target circular_cloud
+[0.058s] [100%] Built target pcd_import

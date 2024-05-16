@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target plane_cloud[0m
+[ 50%] Built target pcd_import
+[ 75%] [32mBuilding CXX object CMakeFiles/plane_cloud.dir/src/1_planner_cloud.cpp.o[0m
+[100%] [32m[1mLinking CXX executable plane_cloud[0m
+[100%] Built target plane_cloud
+-- Install configuration: ""
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/pcd_import
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/package_run_dependencies/pcl_processing
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/parent_prefix_path/pcl_processing
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.sh
+-- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/path.sh
+-- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/path.dsv
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.bash
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.sh
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.zsh
+-- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.dsv
+-- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/package.dsv
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/packages/pcl_processing
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/cmake/pcl_processingConfig.cmake
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/cmake/pcl_processingConfig-version.cmake
+-- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/package.xml

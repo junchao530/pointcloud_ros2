@@ -1,0 +1,2 @@
+Invoking command in '/home/jun/ros2_ws/src/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake /home/jun/ros2_ws/src/pcl_processing -DCMAKE_INSTALL_PREFIX=/home/jun/ros2_ws/src/install/pcl_processing
+Invoked command in '/home/jun/ros2_ws/src/build/pcl_processing' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake /home/jun/ros2_ws/src/pcl_processing -DCMAKE_INSTALL_PREFIX=/home/jun/ros2_ws/src/install/pcl_processing

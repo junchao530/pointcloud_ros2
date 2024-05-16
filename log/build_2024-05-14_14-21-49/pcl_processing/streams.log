@@ -1,0 +1,18 @@
+[0.013s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.044s] [35m[1mConsolidate compiler generated dependencies of target plane_cloud[0m
+[0.055s] [ 75%] [32mBuilding CXX object CMakeFiles/plane_cloud.dir/src/1_planner_cloud.cpp.o[0m
+[0.055s] [ 75%] Built target pcd_import
+[1.929s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/1_planner_cloud.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[1.929s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/1_planner_cloud.cpp:10:50:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kstd[m[K’
+[1.929s]    10 |      cloud.push_back(pcl::PointXYZ(1.0, 2.0,3.0))
+[1.929s]       |                                                  [01;31m[K^[m[K
+[1.929s]       |                                                  [32m[K;[m[K
+[1.929s]    11 |      [32m[Kstd[m[K::string path = "/home/jun/ros2_ws/src/pcl_processing/point_clouds/plane.pcd";
+[1.929s]       |      [32m[K~~~[m[K                                          
+[1.932s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/1_planner_cloud.cpp:12:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath[m[K’ was not declared in this scope
+[1.932s]    12 |      pcl::io::savePCDFileASCII([01;31m[Kpath[m[K, cloud);
+[1.932s]       |                                [01;31m[K^~~~[m[K
+[2.107s] gmake[2]: *** [CMakeFiles/plane_cloud.dir/build.make:76: CMakeFiles/plane_cloud.dir/src/1_planner_cloud.cpp.o] Error 1
+[2.107s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/plane_cloud.dir/all] Error 2
+[2.107s] gmake: *** [Makefile:146: all] Error 2
+[2.110s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jun/ros2_ws/install/py_pubsub:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8

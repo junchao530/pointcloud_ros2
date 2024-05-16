@@ -1,0 +1,27 @@
+[0.021s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target plane_cloud[0m
+[0.125s] [ 25%] Built target pcd_import
+[0.155s] [ 50%] Built target plane_cloud
+[0.180s] [35m[1mConsolidate compiler generated dependencies of target pcl_filter[0m
+[0.205s] [ 62%] [32mBuilding CXX object CMakeFiles/pcl_filter.dir/src/3_filtering.cpp.o[0m
+[3.617s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[3.617s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:25:30:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kpcl::PCDWriter::write<PoinT>(std::string&, std::string&, std::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZRGB>, __gnu_cxx::_S_atomic, false, false>::element_type&)[m[K’
+[3.617s]    25 |     [01;31m[Kcloud_writer.write<PoinT>(path, output_name, *voxel_cloud)[m[K;
+[3.617s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.618s] In file included from [01m[K/home/jun/ros2_ws/src/pcl_processing/src/3_filtering.cpp:2[m[K:
+[3.618s] [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:553:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kint pcl::PCDWriter::write(const string&, const pcl::PointCloud<PointT>&, bool) [with PointT = pcl::PointXYZRGB; std::string = std::__cxx11::basic_string<char>][m[K’
+[3.618s]   553 |       [01;36m[Kwrite[m[K (const std::string &file_name,
+[3.618s]       |       [01;36m[K^~~~~[m[K
+[3.618s] [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:554:45:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst pcl::PointCloud<pcl::PointXYZRGB>&[m[K’
+[3.618s]   554 |              [01;36m[Kconst pcl::PointCloud<PointT> &cloud[m[K,
+[3.618s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[3.618s] [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:577:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kint pcl::PCDWriter::write(const string&, const pcl::PointCloud<PointT>&, const Indices&, bool) [with PointT = pcl::PointXYZRGB; std::string = std::__cxx11::basic_string<char>; pcl::Indices = std::vector<int, std::allocator<int> >][m[K’
+[3.618s]   577 |       [01;36m[Kwrite[m[K (const std::string &file_name,
+[3.618s]       |       [01;36m[K^~~~~[m[K
+[3.618s] [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:578:45:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst pcl::PointCloud<pcl::PointXYZRGB>&[m[K’
+[3.618s]   578 |              [01;36m[Kconst pcl::PointCloud<PointT> &cloud[m[K,
+[3.618s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[4.114s] gmake[2]: *** [CMakeFiles/pcl_filter.dir/build.make:76: CMakeFiles/pcl_filter.dir/src/3_filtering.cpp.o] Error 1
+[4.114s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/pcl_filter.dir/all] Error 2
+[4.115s] gmake: *** [Makefile:146: all] Error 2
+[4.120s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
