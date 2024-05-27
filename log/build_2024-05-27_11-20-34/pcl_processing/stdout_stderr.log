@@ -1,0 +1,21 @@
+[35m[1mConsolidate compiler generated dependencies of target traffic_segmentation[0m
+[ 14%] Built target pcd_import
+[ 28%] Built target plane_cloud
+[ 42%] Built target kitti_voxel
+[ 57%] Built target kd_tree
+[ 71%] Built target circular_cloud
+[ 85%] Built target pcl_filter
+[ 92%] [32mBuilding CXX object CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.o[0m
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:[m[K In member function ‘[01m[Kvoid VoxelGrid_filter::timer_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:142:51:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  142 |             if ([01;35m[Kcluster_indices[i].indices.size() > min_cluster[m[K && cluster_indices[i].indices.size() < max_cluster) {
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:142:102:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  142 |             if (cluster_indices[i].indices.size() > min_cluster && [01;35m[Kcluster_indices[i].indices.size() < max_cluster[m[K) {
+      |                                                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:335:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcenter[m[K’ was not declared in this scope
+  335 |             text_marker.pose.position.x = [01;31m[Kcenter[m[K.x;
+      |                                           [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/traffic_segmentation.dir/build.make:76: CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/traffic_segmentation.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

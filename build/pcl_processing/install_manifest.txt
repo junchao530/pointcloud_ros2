@@ -8,6 +8,7 @@
 /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/bring_rviz.launch.py
 /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/process_kitti.launch.py
 /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//rviz/kitti_viz.rviz
+/home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//rviz/kitti_viz_old.rviz
 /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/package_run_dependencies/pcl_processing
 /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/parent_prefix_path/pcl_processing
 /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.sh

@@ -1,0 +1,43 @@
+[0.019s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.145s] [ 14%] Built target plane_cloud
+[0.146s] [ 28%] Built target pcd_import
+[0.180s] [ 42%] Built target circular_cloud
+[0.183s] [ 57%] Built target kd_tree
+[0.184s] [ 71%] Built target kitti_voxel
+[0.194s] [ 85%] Built target pcl_filter
+[0.211s] [ 92%] [32mBuilding CXX object CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.o[0m
+[12.827s] [100%] [32m[1mLinking CXX executable traffic_segmentation[0m
+[15.183s] [100%] Built target traffic_segmentation
+[15.195s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[15.236s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/pcl_processing
+[15.243s] -- Install configuration: ""
+[15.243s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/kitti_voxel
+[15.243s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/circular_cloud
+[15.243s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/pcd_import
+[15.243s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/plane_cloud
+[15.243s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/kd_tree
+[15.243s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/traffic_segmentation
+[15.247s] -- Set runtime path of "/home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/traffic_segmentation" to ""
+[15.247s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch
+[15.247s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/rtab_mapping.launch.py
+[15.247s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/bring_rviz.launch.py
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/process_kitti.launch.py
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//rviz
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//rviz/kitti_viz.rviz
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//rviz/kitti_viz_old.rviz
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/package_run_dependencies/pcl_processing
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/parent_prefix_path/pcl_processing
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.sh
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.dsv
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/path.sh
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/path.dsv
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.bash
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.sh
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.zsh
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.dsv
+[15.248s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/package.dsv
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/packages/pcl_processing
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/cmake/pcl_processingConfig.cmake
+[15.248s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/cmake/pcl_processingConfig-version.cmake
+[15.249s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/package.xml
+[15.250s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/pcl_processing

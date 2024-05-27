@@ -1,0 +1,50 @@
+[0.038s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.199s] [ 14%] Built target kitti_voxel
+[0.227s] [ 28%] Built target plane_cloud
+[0.242s] [ 42%] Built target pcd_import
+[0.257s] [ 57%] Built target circular_cloud
+[0.286s] [ 71%] Built target pcl_filter
+[0.337s] [ 85%] Built target kd_tree
+[0.391s] [ 92%] [32mBuilding CXX object CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.o[0m
+[10.187s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:[m[K In member function ‘[01m[Kvoid VoxelGrid_filter::timer_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[10.188s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:142:51:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[10.188s]   142 |             if ([01;35m[Kcluster_indices[i].indices.size() > min_cluster[m[K && cluster_indices[i].indices.size() < max_cluster) {
+[10.188s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[10.188s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:142:102:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[10.188s]   142 |             if (cluster_indices[i].indices.size() > min_cluster && [01;35m[Kcluster_indices[i].indices.size() < max_cluster[m[K) {
+[10.188s]       |                                                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[23.859s] [100%] [32m[1mLinking CXX executable traffic_segmentation[0m
+[27.618s] [100%] Built target traffic_segmentation
+[27.635s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[27.691s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/pcl_processing
+[27.709s] -- Install configuration: ""
+[27.710s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/kitti_voxel
+[27.711s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/circular_cloud
+[27.711s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/pcd_import
+[27.713s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/plane_cloud
+[27.713s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/kd_tree
+[27.713s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/traffic_segmentation
+[27.723s] -- Set runtime path of "/home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/traffic_segmentation" to ""
+[27.723s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch
+[27.723s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/rtab_mapping.launch.py
+[27.724s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/bring_rviz.launch.py
+[27.724s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/process_kitti.launch.py
+[27.724s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//rviz
+[27.724s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//rviz/kitti_viz.rviz
+[27.724s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//rviz/kitti_viz_old.rviz
+[27.726s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/package_run_dependencies/pcl_processing
+[27.726s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/parent_prefix_path/pcl_processing
+[27.726s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.sh
+[27.726s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/ament_prefix_path.dsv
+[27.726s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/path.sh
+[27.726s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/environment/path.dsv
+[27.727s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.bash
+[27.727s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.sh
+[27.727s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.zsh
+[27.727s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/local_setup.dsv
+[27.727s] -- Installing: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/package.dsv
+[27.730s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/ament_index/resource_index/packages/pcl_processing
+[27.733s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/cmake/pcl_processingConfig.cmake
+[27.733s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/cmake/pcl_processingConfig-version.cmake
+[27.733s] -- Up-to-date: /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing/package.xml
+[27.739s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/pcl_processing

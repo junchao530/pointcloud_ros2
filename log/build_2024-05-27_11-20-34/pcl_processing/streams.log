@@ -1,0 +1,23 @@
+[0.023s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
+[0.159s] [35m[1mConsolidate compiler generated dependencies of target traffic_segmentation[0m
+[0.180s] [ 14%] Built target pcd_import
+[0.193s] [ 28%] Built target plane_cloud
+[0.193s] [ 42%] Built target kitti_voxel
+[0.194s] [ 57%] Built target kd_tree
+[0.194s] [ 71%] Built target circular_cloud
+[0.208s] [ 85%] Built target pcl_filter
+[0.220s] [ 92%] [32mBuilding CXX object CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.o[0m
+[7.073s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:[m[K In member function ‘[01m[Kvoid VoxelGrid_filter::timer_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[7.073s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:142:51:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[7.073s]   142 |             if ([01;35m[Kcluster_indices[i].indices.size() > min_cluster[m[K && cluster_indices[i].indices.size() < max_cluster) {
+[7.073s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[7.073s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:142:102:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[7.073s]   142 |             if (cluster_indices[i].indices.size() > min_cluster && [01;35m[Kcluster_indices[i].indices.size() < max_cluster[m[K) {
+[7.073s]       |                                                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[7.085s] [01m[K/home/jun/ros2_ws/src/pcl_processing/src/7_traffic_segmentation.cpp:335:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcenter[m[K’ was not declared in this scope
+[7.085s]   335 |             text_marker.pose.position.x = [01;31m[Kcenter[m[K.x;
+[7.085s]       |                                           [01;31m[K^~~~~~[m[K
+[11.335s] gmake[2]: *** [CMakeFiles/traffic_segmentation.dir/build.make:76: CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.o] Error 1
+[11.335s] gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/traffic_segmentation.dir/all] Error 2
+[11.335s] gmake: *** [Makefile:146: all] Error 2
+[11.339s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8

@@ -1,0 +1,4 @@
+Invoking command in '/home/jun/ros2_ws/build/ros2_kitti_publishers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/ros2_kitti_publishers -- -j8 -l8
+Invoked command in '/home/jun/ros2_ws/build/ros2_kitti_publishers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/ros2_kitti_publishers -- -j8 -l8
+Invoking command in '/home/jun/ros2_ws/build/ros2_kitti_publishers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/ros2_kitti_publishers
+Invoked command in '/home/jun/ros2_ws/build/ros2_kitti_publishers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jun/ros2_ws/build/ros2_kitti_publishers

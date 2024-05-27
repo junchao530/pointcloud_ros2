@@ -16,34 +16,29 @@
 #include <pcl/filters/passthrough.h>
 #include <pcl/octree/octree_pointcloud.h>
 #include <pcl/octree/octree.h>
-
 #include <pcl/point_cloud.h>
-
-
 
 using namespace std::chrono_literals;
 typedef pcl::PointXYZ PointT;
 
 class VoxelGrid_filter : public rclcpp::Node
 {
-  public:
+public:
     VoxelGrid_filter()
     : Node("minimal_publisher")
     {
         marker_pub =
         this->create_publisher<visualization_msgs::msg::MarkerArray>("visualization_marker_array", 10);
 
-      subscription_ =
-      this->create_subscription<sensor_msgs::msg::PointCloud2>(
-      "/kitti/point_cloud", 10, std::bind(&VoxelGrid_filter::timer_callback, this, std::placeholders::_1));
+        subscription_ =
+        this->create_subscription<sensor_msgs::msg::PointCloud2>(
+        "/kitti/point_cloud", 10, std::bind(&VoxelGrid_filter::timer_callback, this, std::placeholders::_1));
 
-      publisher_ =
+        publisher_ =
         this->create_publisher<sensor_msgs::msg::PointCloud2>("voxel_cloud", 10);
-
-
     }
 
-  private:
+private:
     void timer_callback(const sensor_msgs::msg::PointCloud2::SharedPtr input_cloud)
     {
         pcl::PointCloud<PointT>::Ptr pcl_cloud (new pcl::PointCloud<PointT>);
@@ -52,16 +47,16 @@ class VoxelGrid_filter : public rclcpp::Node
 
         pcl::PassThrough<PointT> passing_x;
         pcl::PassThrough<PointT> passing_y;
-        int radius = 10;
+        int radius = 15;
         passing_x.setInputCloud(pcl_cloud);
         passing_x.setFilterFieldName("x");
-        passing_x.setFilterLimits(-radius,radius);
+        passing_x.setFilterLimits(-radius, radius);
         passing_x.filter(*cropped_cloud);
 
         // Along Y Axis
         passing_y.setInputCloud(cropped_cloud);
         passing_y.setFilterFieldName("y");
-        passing_y.setFilterLimits(-radius,radius);
+        passing_y.setFilterLimits(-radius, radius);
         passing_y.filter(*cropped_cloud);
 
         // Voxel Filter
@@ -71,7 +66,7 @@ class VoxelGrid_filter : public rclcpp::Node
         voxel_filter.setLeafSize(0.1 , 0.1, 0.1);
         voxel_filter.filter(*voxel_cloud);
 
-        //Road Segmentation
+        // Road Segmentation
         pcl::NormalEstimation<PointT, pcl::Normal> normal_extractor;
         pcl::search::KdTree<PointT>::Ptr tree(new pcl::search::KdTree<PointT>());
         pcl::PointCloud<pcl::Normal>::Ptr road_normals(new pcl::PointCloud<pcl::Normal>);
@@ -82,7 +77,7 @@ class VoxelGrid_filter : public rclcpp::Node
         pcl::ExtractIndices<PointT> road_extract_indices;
         pcl::PointCloud<PointT>::Ptr road_cloud(new pcl::PointCloud<PointT>);
 
-        //normal extraction 
+        // Normal extraction
         normal_extractor.setSearchMethod(tree);
         normal_extractor.setInputCloud(voxel_cloud);
         normal_extractor.setKSearch(30);
@@ -90,244 +85,280 @@ class VoxelGrid_filter : public rclcpp::Node
 
         // Parameters for segmentation
         road_seg_frm_normals.setOptimizeCoefficients(true);
-	    road_seg_frm_normals.setModelType(pcl::SACMODEL_NORMAL_PLANE);
-	    road_seg_frm_normals.setMethodType(pcl::SAC_RANSAC);
-	    road_seg_frm_normals.setNormalDistanceWeight(0.5);
-	    road_seg_frm_normals.setMaxIterations(100);
-	    road_seg_frm_normals.setDistanceThreshold(0.4);
+        road_seg_frm_normals.setModelType(pcl::SACMODEL_NORMAL_PLANE);
+        road_seg_frm_normals.setMethodType(pcl::SAC_RANSAC);
+        road_seg_frm_normals.setNormalDistanceWeight(0.5);
+        road_seg_frm_normals.setMaxIterations(100);
+        road_seg_frm_normals.setDistanceThreshold(0.4);
         road_seg_frm_normals.setInputCloud(voxel_cloud);
-	    road_seg_frm_normals.setInputNormals(road_normals);
-	    road_seg_frm_normals.segment(*road_inliers,*road_coefficients);
+        road_seg_frm_normals.setInputNormals(road_normals);
+        road_seg_frm_normals.segment(*road_inliers,*road_coefficients);
 
-        //Extraction
+        // Extraction
         road_extract_indices.setInputCloud(voxel_cloud);
         road_extract_indices.setIndices(road_inliers);
         road_extract_indices.setNegative(true);
         road_extract_indices.filter(*road_cloud);
-        
 
-        //traffic clustering
+        // Traffic clustering
         pcl::PointCloud<PointT>::Ptr segmented_cluster (new pcl::PointCloud<PointT>);
         pcl::PointCloud<PointT>::Ptr all_clusters (new pcl::PointCloud<PointT>);
         tree->setInputCloud (road_cloud);
         std::vector<pcl::PointIndices> cluster_indices;
         pcl::EuclideanClusterExtraction<PointT> ec;
 
-        struct bbox{
+        struct bbox {
             float x_min;
             float x_max;
             float y_min;
             float y_max;       
             float z_min;
             float z_max;
-            double  r = 1.0;
-            double  g = 0.0;
-            double  b = 0.0;
-            };
-        
-        //Euclidean
-        ec.setClusterTolerance (0.25); // 2cm
-        ec.setMinClusterSize (600);
-        ec.setMaxClusterSize (2000);
-        ec.setSearchMethod (tree);
-        ec.setInputCloud (road_cloud);
-        ec.extract (cluster_indices);
-        std::vector <bbox> bounding_box;
+            double r = 1.0;
+            double g = 0.0;
+            double b = 0.0;
+        };
 
-        size_t min_reasonable_size = 100;
-        size_t max_reasonable_size = 5000;
+        // Euclidean clustering parameters
+        float cluster_tolerance = 0.25; // Tolerance in meters
+        unsigned long int min_cluster = 600;          // Minimum cluster size
+        unsigned long int   max_cluster = 2000;         // Maximum cluster size
+
+        ec.setClusterTolerance(cluster_tolerance);
+        ec.setMinClusterSize(min_cluster);
+        ec.setMaxClusterSize(max_cluster);
+        ec.setSearchMethod(tree);
+        ec.setInputCloud(road_cloud);
+        ec.extract(cluster_indices);
+
+        std::vector<bbox> bounding_box;
+
+        // Define the reference point (e.g., the center of a circle)
+        pcl::PointXYZ reference_point(0.0, 0.0, 0.0); // Change to your actual reference point if needed
+        std::vector<float> distances;
+
         int num_reasonable_clusters = 0;
-        
-        for(size_t i= 0; i<cluster_indices.size(); i++){
-            if(cluster_indices[i].indices.size() > min_reasonable_size && cluster_indices[i].indices.size() <max_reasonable_size){
-            pcl::PointCloud<PointT>::Ptr reasonable_cluster (new pcl::PointCloud<PointT>);
-            pcl::ExtractIndices<PointT> extract;
-            pcl::IndicesPtr indices(new std::vector<int>(cluster_indices[i].indices.begin(), cluster_indices[i].indices.end()));
-            extract.setInputCloud(road_cloud);
-            extract.setIndices(indices);
-            extract.setNegative(false);
-            extract.filter(*reasonable_cluster);
-            all_clusters->operator+=(*reasonable_cluster);
-            num_reasonable_clusters++;
-            
-            //bounding box
-            
-            Eigen::Vector4f min_pt, max_pt;
-            pcl::getMinMax3D<PointT>(*reasonable_cluster, min_pt, max_pt);
+        for (size_t i = 0; i < cluster_indices.size(); i++) {
+            if (cluster_indices[i].indices.size() > min_cluster && cluster_indices[i].indices.size() < max_cluster) {
+                pcl::PointCloud<PointT>::Ptr reasonable_cluster (new pcl::PointCloud<PointT>);
+                pcl::ExtractIndices<PointT> extract;
+                pcl::IndicesPtr indices(new std::vector<int>(cluster_indices[i].indices.begin(), cluster_indices[i].indices.end()));
+                extract.setInputCloud(road_cloud);
+                extract.setIndices(indices);
+                extract.setNegative(false);
+                extract.filter(*reasonable_cluster);
+                all_clusters->operator+=(*reasonable_cluster);
+                num_reasonable_clusters++;
 
-            pcl::PointXYZ center((min_pt[0] + max_pt[0])/2, (min_pt[1]+max_pt[1])/2.0, (min_pt[2]+max_pt[2])/2.0);
-            bbox box;
-            box.x_min = min_pt[0];
-            box.y_min = min_pt[1];
-            box.z_min = min_pt[2];
-            box.x_max = max_pt[0];
-            box.y_max = max_pt[1];
-            box.z_max = max_pt[2];
-            
-            bounding_box.push_back(box);
-            
+                // Bounding box
+                Eigen::Vector4f min_pt, max_pt;
+                pcl::getMinMax3D<PointT>(*reasonable_cluster, min_pt, max_pt);
+
+                pcl::PointXYZ center((min_pt[0] + max_pt[0]) / 2, (min_pt[1] + max_pt[1]) / 2.0, (min_pt[2] + max_pt[2]) / 2.0);
+                bbox box;
+                box.x_min = min_pt[0];
+                box.y_min = min_pt[1];
+                box.z_min = min_pt[2];
+                box.x_max = max_pt[0];
+                box.y_max = max_pt[1];
+                box.z_max = max_pt[2];
+                bounding_box.push_back(box);
+
+                // Calculate the distance from the center of the bounding box to the reference point
+                float distance = std::sqrt(
+                    std::pow(center.x - reference_point.x, 2) +
+                    std::pow(center.y - reference_point.y, 2) +
+                    std::pow(center.z - reference_point.z, 2)
+                );
+                distances.push_back(distance);
+
+                // Print the distance (optional)
+                std::cout << "Distance to reference point: " << distance << std::endl;
             }
         }
-        //drawing boxes
 
+        // Drawing boxes
         visualization_msgs::msg::MarkerArray marker_array;
         int id = 0;
         const std_msgs::msg::Header& inp_header = input_cloud -> header;
 
-        for(const auto& box : bounding_box){
-                    // Create the marker for the top square
-        visualization_msgs::msg::Marker top_square_marker;
-        top_square_marker.header = inp_header;
-        top_square_marker.ns = "bounding_boxes";
-        top_square_marker.id = id++;
-        top_square_marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
-        top_square_marker.action = visualization_msgs::msg::Marker::ADD;
-        top_square_marker.pose.orientation.w = 1.0;
-        top_square_marker.scale.x = 0.06;
-        top_square_marker.color.r = box.r;
-        top_square_marker.color.g = box.g;
-        top_square_marker.color.b = box.b;
-        top_square_marker.color.a = 1.0;
+        for (size_t i = 0; i < bounding_box.size(); ++i) {
+            const auto& box = bounding_box[i];
+            float distance = distances[i];
 
-        // Add the points to the top square marker
-        geometry_msgs::msg::Point p1, p2, p3, p4;
-        p1.x = box.x_max; p1.y = box.y_max; p1.z = box.z_max;
-        p2.x = box.x_min; p2.y = box.y_max; p2.z = box.z_max;
-        p3.x = box.x_min; p3.y = box.y_min; p3.z = box.z_max;
-        p4.x = box.x_max; p4.y = box.y_min; p4.z = box.z_max;
-        top_square_marker.points.push_back(p1);
-        top_square_marker.points.push_back(p2);
-        top_square_marker.points.push_back(p3);
-        top_square_marker.points.push_back(p4);
-        top_square_marker.points.push_back(p1);
+            // Calculate the center of the bounding box
+            pcl::PointXYZ center((box.x_min + box.x_max) / 2.0, (box.y_min + box.y_max) / 2.0, (box.z_min + box.z_max) / 2.0);
 
-        // Add the top square marker to the array
-        marker_array.markers.push_back(top_square_marker);
+            // Create the marker for the top square
+            visualization_msgs::msg::Marker top_square_marker;
+            top_square_marker.header = inp_header;
+            top_square_marker.ns = "bounding_boxes";
+            top_square_marker.id = id++;
+            top_square_marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
+            top_square_marker.action = visualization_msgs::msg::Marker::ADD;
+            top_square_marker.pose.orientation.w = 1.0;
+            top_square_marker.scale.x = 0.06;
+            top_square_marker.color.r = box.r;
+            top_square_marker.color.g = box.g;
+            top_square_marker.color.b = box.b;
+            top_square_marker.color.a = 1.0;
 
-        // Create the marker for the bottom square
-        visualization_msgs::msg::Marker bottom_square_marker;
-        bottom_square_marker.header = inp_header;
-        bottom_square_marker.ns = "bounding_boxes";
-        bottom_square_marker.id = id++;
-        bottom_square_marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
-        bottom_square_marker.action = visualization_msgs::msg::Marker::ADD;
-        bottom_square_marker.pose.orientation.w = 1.0;
-        bottom_square_marker.scale.x = 0.04;
-        bottom_square_marker.color.r = box.r;
-        bottom_square_marker.color.g = box.g;
-        bottom_square_marker.color.b = box.b;
-        bottom_square_marker.color.a = 1.0;
+            // Add the points to the top square marker
+            geometry_msgs::msg::Point p1, p2, p3, p4;
+            p1.x = box.x_max; p1.y = box.y_max; p1.z = box.z_max;
+            p2.x = box.x_min; p2.y = box.y_max; p2.z = box.z_max;
+            p3.x = box.x_min; p3.y = box.y_min; p3.z = box.z_max;
+            p4.x = box.x_max; p4.y = box.y_min; p4.z = box.z_max;
+            top_square_marker.points.push_back(p1);
+            top_square_marker.points.push_back(p2);
+            top_square_marker.points.push_back(p3);
+            top_square_marker.points.push_back(p4);
+            top_square_marker.points.push_back(p1);
 
-        // Add the points to the bottom square marker
-        geometry_msgs::msg::Point p5, p6, p7, p8;
-        p5.x = box.x_max; p5.y = box.y_max; p5.z = box.z_min;
-        p6.x = box.x_min; p6.y = box.y_max; p6.z = box.z_min;
-        p7.x = box.x_min; p7.y = box.y_min; p7.z = box.z_min;
-        p8.x = box.x_max; p8.y = box.y_min; p8.z = box.z_min;
+            // Add the top square marker to the array
+            marker_array.markers.push_back(top_square_marker);
 
-        bottom_square_marker.points.push_back(p5);
-        bottom_square_marker.points.push_back(p6);
-        bottom_square_marker.points.push_back(p7);
-        bottom_square_marker.points.push_back(p8);
-        bottom_square_marker.points.push_back(p5); // connect the last point to the first point to close the square
+            // Create the marker for the bottom square
+            visualization_msgs::msg::Marker bottom_square_marker;
+            bottom_square_marker.header = inp_header;
+            bottom_square_marker.ns = "bounding_boxes";
+            bottom_square_marker.id = id++;
+            bottom_square_marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
+            bottom_square_marker.action = visualization_msgs::msg::Marker::ADD;
+            bottom_square_marker.pose.orientation.w = 1.0;
+            bottom_square_marker.scale.x = 0.04;
+            bottom_square_marker.color.r = box.r;
+            bottom_square_marker.color.g = box.g;
+            bottom_square_marker.color.b = box.b;
+            bottom_square_marker.color.a = 1.0;
 
-        // Add the bottom square marker to the marker array
-        marker_array.markers.push_back(bottom_square_marker);
+            // Add the points to the bottom square marker
+            geometry_msgs::msg::Point p5, p6, p7, p8;
+            p5.x = box.x_max; p5.y = box.y_max; p5.z = box.z_min;
+            p6.x = box.x_min; p6.y = box.y_max; p6.z = box.z_min;
+            p7.x = box.x_min; p7.y = box.y_min; p7.z = box.z_min;
+            p8.x = box.x_max; p8.y = box.y_min; p8.z = box.z_min;
 
+            bottom_square_marker.points.push_back(p5);
+            bottom_square_marker.points.push_back(p6);
+            bottom_square_marker.points.push_back(p7);
+            bottom_square_marker.points.push_back(p8);
+            bottom_square_marker.points.push_back(p5); // connect the last point to the first point to close the square
 
-        // Create the marker for the lines connecting the top and bottom squares
-        visualization_msgs::msg::Marker connecting_lines_marker;
-        connecting_lines_marker.header = inp_header;
-        connecting_lines_marker.ns = "bounding_boxes";
-        connecting_lines_marker.id = id++;
-        connecting_lines_marker.type = visualization_msgs::msg::Marker::LINE_LIST;
-        connecting_lines_marker.action = visualization_msgs::msg::Marker::ADD;
-        connecting_lines_marker.pose.orientation.w = 1.0;
-        connecting_lines_marker.scale.x = 0.04;
-        connecting_lines_marker.color.r = 0.0;
-        connecting_lines_marker.color.g = 1.0;
-        connecting_lines_marker.color.b = 0.0;
-        connecting_lines_marker.color.a = 1.0;
+            // Add the bottom square marker to the marker array
+            marker_array.markers.push_back(bottom_square_marker);
 
-        // Add the points to the connecting lines marker
-        connecting_lines_marker.points.push_back(p1);
-        connecting_lines_marker.points.push_back(p5);
+            // Create the marker for the lines connecting the top and bottom squares
+            visualization_msgs::msg::Marker connecting_lines_marker;
+            connecting_lines_marker.header = inp_header;
+            connecting_lines_marker.ns = "bounding_boxes";
+            connecting_lines_marker.id = id++;
+            connecting_lines_marker.type = visualization_msgs::msg::Marker::LINE_LIST;
+            connecting_lines_marker.action = visualization_msgs::msg::Marker::ADD;
+            connecting_lines_marker.pose.orientation.w = 1.0;
+            connecting_lines_marker.scale.x = 0.04;
+            connecting_lines_marker.color.r = 0.0;
+            connecting_lines_marker.color.g = 1.0;
+            connecting_lines_marker.color.b = 0.0;
+            connecting_lines_marker.color.a = 1.0;
 
-        connecting_lines_marker.points.push_back(p2);
-        connecting_lines_marker.points.push_back(p6);
+            // Add the points to the connecting lines marker
+            connecting_lines_marker.points.push_back(p1);
+            connecting_lines_marker.points.push_back(p5);
 
-        connecting_lines_marker.points.push_back(p3);
-        connecting_lines_marker.points.push_back(p7);
+            connecting_lines_marker.points.push_back(p2);
+            connecting_lines_marker.points.push_back(p6);
 
-        connecting_lines_marker.points.push_back(p4);
-        connecting_lines_marker.points.push_back(p8);
+            connecting_lines_marker.points.push_back(p3);
+            connecting_lines_marker.points.push_back(p7);
 
-        // Add the connecting lines marker to the marker array
-        marker_array.markers.push_back(connecting_lines_marker);
+            connecting_lines_marker.points.push_back(p4);
+            connecting_lines_marker.points.push_back(p8);
 
+            // Add the connecting lines marker to the marker array
+            marker_array.markers.push_back(connecting_lines_marker);
 
-        // Create a marker for the corners
-        visualization_msgs::msg::Marker corner_marker;
-        corner_marker.header = inp_header;
-        corner_marker.ns = "bounding_boxes";
-        corner_marker.id = id++;
-        corner_marker.type = visualization_msgs::msg::Marker::SPHERE;
-        corner_marker.action = visualization_msgs::msg::Marker::ADD;
-        corner_marker.pose.orientation.w = 1.0;
-        corner_marker.scale.x = 0.4;
-        corner_marker.scale.y = 0.4;
-        corner_marker.scale.z = 0.4;
-        corner_marker.color.r = box.r;
-        corner_marker.color.g = 0.2;
-        corner_marker.color.b = 0.5;
-        corner_marker.color.a = 0.64;
+            // Create a marker for the corners
+            visualization_msgs::msg::Marker corner_marker;
+            corner_marker.header = inp_header;
+            corner_marker.ns = "bounding_boxes";
+            corner_marker.id = id++;
+            corner_marker.type = visualization_msgs::msg::Marker::SPHERE;
+            corner_marker.action = visualization_msgs::msg::Marker::ADD;
+            corner_marker.pose.orientation.w = 1.0;
+            corner_marker.scale.x = 0.4;
+            corner_marker.scale.y = 0.4;
+            corner_marker.scale.z = 0.4;
+            corner_marker.color.r = box.r;
+            corner_marker.color.g = 0.2;
+            corner_marker.color.b = 0.5;
+            corner_marker.color.a = 0.64;
 
-        // Create a sphere for each corner and add it to the marker array
+            // Create a sphere for each corner and add it to the marker array
 
-        corner_marker.pose.position = p1;
-        corner_marker.id = id++;
-        marker_array.markers.push_back(corner_marker);
+            corner_marker.pose.position = p1;
+            corner_marker.id = id++;
+            marker_array.markers.push_back(corner_marker);
 
-        corner_marker.pose.position = p2;
-        corner_marker.id = id++;
-        marker_array.markers.push_back(corner_marker);
+            corner_marker.pose.position = p2;
+            corner_marker.id = id++;
+            marker_array.markers.push_back(corner_marker);
 
-        corner_marker.pose.position = p3;
-        corner_marker.id = id++;
-        marker_array.markers.push_back(corner_marker);
+            corner_marker.pose.position = p3;
+            corner_marker.id = id++;
+            marker_array.markers.push_back(corner_marker);
 
-        corner_marker.pose.position = p4;
-        corner_marker.id = id++;
-        marker_array.markers.push_back(corner_marker);
+            corner_marker.pose.position = p4;
+            corner_marker.id = id++;
+            marker_array.markers.push_back(corner_marker);
 
-        corner_marker.pose.position = p5;
-        corner_marker.id = id++;
-        marker_array.markers.push_back(corner_marker);
+            corner_marker.pose.position = p5;
+            corner_marker.id = id++;
+            marker_array.markers.push_back(corner_marker);
 
-        corner_marker.pose.position = p6;
-        corner_marker.id = id++;
-        marker_array.markers.push_back(corner_marker);
+            corner_marker.pose.position = p6;
+            corner_marker.id = id++;
+            marker_array.markers.push_back(corner_marker);
 
-        corner_marker.pose.position = p7;
-        corner_marker.id = id++;
-        marker_array.markers.push_back(corner_marker);
+            corner_marker.pose.position = p7;
+            corner_marker.id = id++;
+            marker_array.markers.push_back(corner_marker);
 
-        corner_marker.pose.position = p8;
-        corner_marker.id = id++;
-        marker_array.markers.push_back(corner_marker);
+            corner_marker.pose.position = p8;
+            corner_marker.id = id++;
+            marker_array.markers.push_back(corner_marker);
+
+            // Create a text marker to display the distance
+            visualization_msgs::msg::Marker text_marker;
+            text_marker.header = inp_header;
+            text_marker.ns = "bounding_boxes";
+            text_marker.id = id++;
+            text_marker.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
+            text_marker.action = visualization_msgs::msg::Marker::ADD;
+            text_marker.pose.position.x = center.x;
+            text_marker.pose.position.y = center.y;
+            text_marker.pose.position.z = box.z_max + 0.5; // Slightly above the bounding box
+            text_marker.scale.z = 0.4; // Size of the text
+            text_marker.color.r = 0.0;
+            text_marker.color.g = 1.0;
+            text_marker.color.b = 0.0;
+            text_marker.color.a = 1.0;
+            text_marker.text = std::to_string(distance) + " m";
+
+            // Add the text marker to the marker array
+            marker_array.markers.push_back(text_marker);
+        }
 
         marker_pub->publish(marker_array);
-        }
+
         // Convert cloud to ros2 message
         sensor_msgs::msg::PointCloud2 traffic_seg_ros2;
         pcl::toROSMsg(*all_clusters, traffic_seg_ros2);
         traffic_seg_ros2.header = input_cloud->header;
-        //std::cout << "PointCloud size before voxelization: " << pcl_cloud->size() << std::endl;
-        //std::cout << "PointCloud size after voxelization: " << voxel_cloud->size() << std::endl;
 
         publisher_->publish(traffic_seg_ros2);
-
     }
+
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr publisher_;

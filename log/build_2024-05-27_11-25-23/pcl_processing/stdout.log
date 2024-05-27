@@ -1,0 +1,8 @@
+[35m[1mConsolidate compiler generated dependencies of target traffic_segmentation[0m
+[ 14%] Built target pcd_import
+[ 28%] Built target plane_cloud
+[ 42%] Built target circular_cloud
+[ 57%] Built target kitti_voxel
+[ 71%] Built target kd_tree
+[ 85%] Built target pcl_filter
+[ 92%] [32mBuilding CXX object CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.o[0m
