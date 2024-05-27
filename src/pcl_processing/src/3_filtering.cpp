@@ -24,18 +24,18 @@
 
 
 typedef pcl::PointXYZ PointT;
-
+// function is for saving the input cloud data
 void cloud_saver(const std::string& file_name,std::string& path, pcl::PointCloud<PointT>::Ptr cloud_arg){
     pcl::PCDWriter cloud_writer;
     cloud_writer.write<PointT>(path+std::string(file_name),*cloud_arg);
 }
 
 int main()
-{
+{   
     // ********************************     Reading the Cloud
     pcl::PointCloud<PointT>::Ptr cloud (new pcl::PointCloud<PointT>) ;
     pcl::PCDReader cloud_reader;
-    std::string path = "/home/luqman/ros2_ws/src/ROS2-Point-Cloud-Clustering-and-Segmentation-for-Autonomous-Behaviour/point_cloud_processing/point_clouds/";
+    std::string path = "/home/jun/ros2_ws/src/pcl_processing/point_clouds/";
     std::string input_cloud = "tb3_world.pcd";
     cloud_reader.read(path+input_cloud , *cloud);
 
@@ -64,12 +64,13 @@ int main()
     passing_y.filter(*passthrough_cloud);
 
     // ********************************     Planner Segmentation
+    //Creates Pointers to Various PCL Data Structures
     pcl::PointIndices::Ptr  inliers (new pcl::PointIndices);
     pcl::ModelCoefficients::Ptr  coefficients (new pcl::ModelCoefficients);
     pcl::PointCloud<PointT>::Ptr plane_segmented_cloud (new pcl::PointCloud<PointT>) ;
     pcl::SACSegmentation<PointT> plane_segmentor;
     pcl::ExtractIndices<PointT> indices_extractor;
-
+    
     plane_segmentor.setInputCloud(passthrough_cloud);
     plane_segmentor.setModelType(pcl::SACMODEL_PLANE);
     plane_segmentor.setMethodType(pcl::SAC_RANSAC);

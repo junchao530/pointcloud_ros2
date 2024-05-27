@@ -1,9 +1,0 @@
-[0.024s] Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8
-[0.095s] [31mCMake Error at CMakeLists.txt:33:
-[0.095s]   Parse error.  Expected a newline, got identifier with text "path_creation".
-[0.095s] 
-[0.095s] [0m
-[0.095s] -- Configuring incomplete, errors occurred!
-[0.095s] See also "/home/jun/ros2_ws/build/pcl_processing/CMakeFiles/CMakeOutput.log".
-[0.100s] gmake: *** [Makefile:390: cmake_check_build_system] Error 1
-[0.102s] Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8

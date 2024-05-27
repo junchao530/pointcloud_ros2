@@ -262,6 +262,32 @@ kitti_voxel/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kitti_voxel.dir/build.make CMakeFiles/kitti_voxel.dir/build
 .PHONY : kitti_voxel/fast
 
+#=============================================================================
+# Target rules for targets named kd_tree
+
+# Build rule for target.
+kd_tree: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kd_tree
+.PHONY : kd_tree
+
+# fast build rule for target.
+kd_tree/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kd_tree.dir/build.make CMakeFiles/kd_tree.dir/build
+.PHONY : kd_tree/fast
+
+#=============================================================================
+# Target rules for targets named traffic_segmentation
+
+# Build rule for target.
+traffic_segmentation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 traffic_segmentation
+.PHONY : traffic_segmentation
+
+# fast build rule for target.
+traffic_segmentation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/traffic_segmentation.dir/build.make CMakeFiles/traffic_segmentation.dir/build
+.PHONY : traffic_segmentation/fast
+
 src/0_table_scene.o: src/0_table_scene.cpp.o
 .PHONY : src/0_table_scene.o
 
@@ -382,6 +408,54 @@ src/5_kitti_voxel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kitti_voxel.dir/build.make CMakeFiles/kitti_voxel.dir/src/5_kitti_voxel.cpp.s
 .PHONY : src/5_kitti_voxel.cpp.s
 
+src/6_kd_tree.o: src/6_kd_tree.cpp.o
+.PHONY : src/6_kd_tree.o
+
+# target to build an object file
+src/6_kd_tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kd_tree.dir/build.make CMakeFiles/kd_tree.dir/src/6_kd_tree.cpp.o
+.PHONY : src/6_kd_tree.cpp.o
+
+src/6_kd_tree.i: src/6_kd_tree.cpp.i
+.PHONY : src/6_kd_tree.i
+
+# target to preprocess a source file
+src/6_kd_tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kd_tree.dir/build.make CMakeFiles/kd_tree.dir/src/6_kd_tree.cpp.i
+.PHONY : src/6_kd_tree.cpp.i
+
+src/6_kd_tree.s: src/6_kd_tree.cpp.s
+.PHONY : src/6_kd_tree.s
+
+# target to generate assembly for a file
+src/6_kd_tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kd_tree.dir/build.make CMakeFiles/kd_tree.dir/src/6_kd_tree.cpp.s
+.PHONY : src/6_kd_tree.cpp.s
+
+src/7_traffic_segmentation.o: src/7_traffic_segmentation.cpp.o
+.PHONY : src/7_traffic_segmentation.o
+
+# target to build an object file
+src/7_traffic_segmentation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/traffic_segmentation.dir/build.make CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.o
+.PHONY : src/7_traffic_segmentation.cpp.o
+
+src/7_traffic_segmentation.i: src/7_traffic_segmentation.cpp.i
+.PHONY : src/7_traffic_segmentation.i
+
+# target to preprocess a source file
+src/7_traffic_segmentation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/traffic_segmentation.dir/build.make CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.i
+.PHONY : src/7_traffic_segmentation.cpp.i
+
+src/7_traffic_segmentation.s: src/7_traffic_segmentation.cpp.s
+.PHONY : src/7_traffic_segmentation.s
+
+# target to generate assembly for a file
+src/7_traffic_segmentation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/traffic_segmentation.dir/build.make CMakeFiles/traffic_segmentation.dir/src/7_traffic_segmentation.cpp.s
+.PHONY : src/7_traffic_segmentation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -398,10 +472,12 @@ help:
 	@echo "... pcl_processing_uninstall"
 	@echo "... uninstall"
 	@echo "... circular_cloud"
+	@echo "... kd_tree"
 	@echo "... kitti_voxel"
 	@echo "... pcd_import"
 	@echo "... pcl_filter"
 	@echo "... plane_cloud"
+	@echo "... traffic_segmentation"
 	@echo "... src/0_table_scene.o"
 	@echo "... src/0_table_scene.i"
 	@echo "... src/0_table_scene.s"
@@ -417,6 +493,12 @@ help:
 	@echo "... src/5_kitti_voxel.o"
 	@echo "... src/5_kitti_voxel.i"
 	@echo "... src/5_kitti_voxel.s"
+	@echo "... src/6_kd_tree.o"
+	@echo "... src/6_kd_tree.i"
+	@echo "... src/6_kd_tree.s"
+	@echo "... src/7_traffic_segmentation.o"
+	@echo "... src/7_traffic_segmentation.i"
+	@echo "... src/7_traffic_segmentation.s"
 .PHONY : help
 
 

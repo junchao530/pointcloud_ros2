@@ -1,3 +1,0 @@
-[0.037s] Invoking command in '/home/jun/ros2_ws/build/ros2_kitti_publishers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/ros2_kitti_publishers -- -j8 -l8
-[0.211s] [ 50%] Built target ros2_kitti_publishers
-[0.256s] [100%] Built target kitti_publishers

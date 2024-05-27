@@ -1,6 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target circular_cloud[0m
-[35m[1mConsolidate compiler generated dependencies of target pcl_filter[0m
-[ 25%] Built target plane_cloud
-[ 50%] Built target pcd_import
-[ 62%] [32mBuilding CXX object CMakeFiles/pcl_filter.dir/src/3_filtering.cpp.o[0m
-[ 87%] Built target circular_cloud

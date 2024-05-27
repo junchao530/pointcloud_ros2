@@ -4,12 +4,13 @@
 
 int main()
 {
-    //contains 3D points, also a vector
+    //contains 3D points, also a vector but now wtih colro
      pcl::PointCloud<pcl::PointXYZRGB> cloud;
      double radius = 3.0;
      int num_points = 500;
      double angular_step_size = 2.0*M_PI/num_points;
      
+    // for loop for creating a spinning circle.
      for(int i =0 ; i<num_points; i++){
 
      double angel = i * angular_step_size;

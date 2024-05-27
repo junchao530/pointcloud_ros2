@@ -1,0 +1,3 @@
+Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jun/ros2_ws/src/pcl_processing -DCMAKE_INSTALL_PREFIX=/home/jun/ros2_ws/install/pcl_processing
+Invoked command in '/home/jun/ros2_ws/build/pcl_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jun/ros2_ws/src/pcl_processing -DCMAKE_INSTALL_PREFIX=/home/jun/ros2_ws/install/pcl_processing
+Invoking command in '/home/jun/ros2_ws/build/pcl_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jun/ros2_ws/build/pcl_processing -- -j8 -l8

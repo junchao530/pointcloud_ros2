@@ -1,6 +1,0 @@
-[0m** WARNING ** io features related to pcap will be disabled[0m
-[31mCMake Error at CMakeLists.txt:14 (add_definition):
-  Unknown CMake command "add_definition".
-
-[0m
-gmake: *** [Makefile:226: cmake_check_build_system] Error 1

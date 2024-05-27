@@ -1,1 +1,0 @@
-Invoking command in '/home/jun/ros2_ws/build/ros2_kitti_publishers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jun/ros2_ws/src/ros2_kitti_publishers -DCMAKE_INSTALL_PREFIX=/home/jun/ros2_ws/install/ros2_kitti_publishers

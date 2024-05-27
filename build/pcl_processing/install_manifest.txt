@@ -2,6 +2,8 @@
 /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/circular_cloud
 /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/pcd_import
 /home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/plane_cloud
+/home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/kd_tree
+/home/jun/ros2_ws/install/pcl_processing/lib/pcl_processing/traffic_segmentation
 /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/rtab_mapping.launch.py
 /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/bring_rviz.launch.py
 /home/jun/ros2_ws/install/pcl_processing/share/pcl_processing//launch/process_kitti.launch.py
